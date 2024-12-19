@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="rootPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.playController">
+    
+    <!-- Background Layer -->
+    <ImageView fx:id="backgroundImage" fitHeight="640" fitWidth="360" preserveRatio="false">
+        <Image url="@../asset/bg.jpg" />
+    </ImageView>
+    
+    <!-- Game Elements Layer -->
+    <Pane fx:id="gamePane" prefHeight="640" prefWidth="360">
+        
+        <!-- Score Display -->
+        <Label fx:id="scoreLabel" layoutX="10" layoutY="10" style="-fx-font-size: 32px; -fx-font-family: 'Arial';" textFill="WHITE" />
+        
+        <!-- Bird Image -->
+        <ImageView fx:id="playerImage" fitHeight="44" fitWidth="54" preserveRatio="true">
+            <Image url="@../asset/skin1.png" />
+        </ImageView> 
+   
+        <!-- Menu Button -->
+        <ImageView fx:id="menuButton" fitHeight="44.0" fitWidth="54.0" layoutX="219.0" layoutY="409.0" onMouseClicked="#returnToMenu" pickOnBounds="true" visible="true">
+            <Image url="@../asset/menu.png" />
+        </ImageView>
+   
+        <!-- Restart Button -->
+        <ImageView fx:id="restartButton" fitHeight="44.0" fitWidth="114.0" layoutX="87.0" layoutY="409.0" onMouseClicked="#resetGame" pickOnBounds="true" visible="true">
+            <Image url="@../asset/retry.png" />
+        </ImageView>
+
+        <!-- Game Over Image -->
+        <ImageView fx:id="gameOverImage" fitHeight="169.0" fitWidth="265.0" layoutX="48.0" layoutY="212.0" visible="false">
+            <Image url="@../asset/gameOver.png" />
+        </ImageView>
+    </Pane>
+    
+    <!-- Define Pipe Images as Resources -->
+    <fx:define>
+        <Image fx:id="topVineImage" url="@../asset/topVine.png" />
+        <Image fx:id="bottomVineImage" url="@../asset/bottomVine.png" />
+    </fx:define> 
+    
+</StackPane>

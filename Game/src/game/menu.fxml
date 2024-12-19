@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.MenuController">
+   <children>
+      <ImageView fitHeight="640.0" fitWidth="360.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/bg.jpg" />
+         </image>
+      </ImageView>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="buttonStart" fitHeight="78.0" fitWidth="171.0" layoutX="94.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/play.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="328.0" fitWidth="86.0" layoutX="219.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true" rotate="26.6">
+               <image>
+                  <Image url="@../asset/skin2.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="exitButton" fitHeight="32.0" fitWidth="68.0" layoutX="146.0" layoutY="501.0" onMouseClicked="#handleExitButtonClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="227.0" fitWidth="266.0" layoutX="52.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" rotate="-8.7">
+               <image>
+                  <Image url="@../asset/skin1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="159.0" fitWidth="287.0" layoutX="36.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/title.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</StackPane>
